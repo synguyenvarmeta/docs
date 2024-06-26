@@ -18,6 +18,12 @@
 | `boost_percentage`  | Indicates a percentage increase in a certain characteristic, amplifying the item's abilities proportionally.| ```json { "display_type": "boost_percentage", "trait_type": "Stamina Increase", "value": 10 } ```     |
 | `number`            | Represents a simple number, used for levels, generation numbers, or other numeric attributes.             | ```json { "display_type": "number", "trait_type": "Generation", "value": 2 } ```                      |
 | `date`              | Represents a date as a Unix timestamp (seconds since the Unix epoch).                                     | ```json { "display_type": "date", "trait_type": "Birthday", "value": 1618953600 } ```                 |
+| `null`              | Represents a default view                                                                                 | ```json { "trait_type": "Birthday", "value": 1618953600 } ```                                         |
+
+**Description of `trait_type` and `value`:**
+
+- `trait_type`: Describes the trait category or characteristic.
+- `value`: Describes the specific value of the trait.
 
 # Example Metadata JSON
 
@@ -27,20 +33,8 @@
   "description": "Sushi Farm is a Web 3 multiplayer game with vicious competition. Survive through multiple attacks and feast your way through victory.",
   "image": "https://www.sushifarm.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsalmon-roll.b431adb5.png&w=828&q=75",
   "external_url": "https://www.sushifarm.io/",
-  "artist": "0x45d1A075c51186291a2eB914cbC7B0efe17BDDe8",
+  "animation_url":"https://www.sushifarm.io/animation_url",
   "attributes": [
-    {
-      "trait_type": "Base",
-      "value": "Sushi"
-    },
-    {
-      "trait_type": "Eyes",
-      "value": "Small"
-    },
-    {
-      "trait_type": "Size",
-      "value": "Small"
-    },
     {
       "trait_type": "Stamina",
       "value": 3
@@ -59,10 +53,21 @@
       "display_type": "number",
       "trait_type": "Generation",
       "value": 3
+    },
+    {
+      "display_type": "date", 
+      "trait_type": "birthday", 
+      "value": 1546360800
     }
   ]
 }
 
+
 ```
 
 For more details, refer to the official documentation on [NFTify Metadata Standards](https://support.nftify.network/hc/en-us/articles/4409618795417-Metadata-Standards) and [OpenSea Metadata Standards](https://docs.opensea.io/docs/metadata-standards).
+
+
+
+
+
