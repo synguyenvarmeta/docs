@@ -25,19 +25,76 @@
 - `trait_type`: Describes the trait category or characteristic.
 - `value`: Describes the specific value of the trait.
 
+**Detail of `trait_type` in sushi game:**
+
+| Trait Type            | Value             | Display Type        | Description                                                      |
+|-----------------------|-------------------|---------------------|------------------------------------------------------------------|
+| Character Type        | Sushi             |                     | The general type of the character.                               |
+| Sushi Type            | Nigiri Supreme    |                     | Specifies the kind of sushi.                                     |
+| Engagement Level      | Paid NFT User     |                     | Indicates if the user is a free player or a paid NFT user.       |
+| Play-and-Earn         | Enabled           |                     | Indicates whether the character is eligible for play-and-earn rewards. |
+| Special Ability       | Swift Dash        |                     | The unique ability the character possesses.                      |
+| Properties            | Tough             |                     | General characteristics of the sushi character.                  |
+| Size                  | Medium            |                     | The physical size of the sushi character.                        |
+| Ingredient            | Rice And Eggs     |                     | Main ingredients of the sushi character.                         |
+| Speed                 | Moderate          |                     | The movement speed of the character.                             |
+| Points                | 22                | number              | The initial points associated with the character.                |
+| Power                 | 3                 | boost_number        | The boost number for the character’s power.                      |
+| Attack Power          | 20%               | boost_percentage    | Percentage increase in attack power.                             |
+| Obstacle Resistance   | 20%               | boost_percentage    | Percentage resistance to obstacles.                              |
+| Birthday              | 1546360800 (Unix Timestamp) | date | The creation date of the NFT in Unix timestamp format.          |
+
+
 # Example Metadata JSON
 
 ```json
 {
-  "name": "Sushifarm",
-  "description": "Sushi Farm is a Web 3 multiplayer game with vicious competition. Survive through multiple attacks and feast your way through victory.",
+  "name": "Sushi Character - Nigiri Supreme",
+  "description": "Nigiri Supreme is a top-tier sushi character in Sushi Farm, featuring a delicate balance of rice and fresh fish. As a Paid NFT User, this character offers exclusive benefits like Play-and-Earn rewards, future customization options, and access to upcoming exclusive tournaments.",
   "image": "https://www.sushifarm.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsalmon-roll.b431adb5.png&w=828&q=75",
   "external_url": "https://www.sushifarm.io/",
   "animation_url":"https://www.sushifarm.io/animation_url",
   "attributes": [
+     {
+      "trait_type": "Character Type",
+      "value": "Sushi"
+    },
     {
-      "trait_type": "Stamina",
-      "value": 3
+      "trait_type": "Sushi Type",
+      "value": "Nigiri Supreme"
+    },
+    {
+      "trait_type": "Engagement Level",
+      "value": "Paid NFT User"
+    },
+    {
+      "trait_type": "Play-and-Earn",
+      "value": "Enabled"
+    },
+    {
+      "trait_type": "Special Ability",
+      "value": "Swift Dash"
+    },
+    {
+      "trait_type": "Properties",
+      "value": "Tough"
+    },
+    {
+      "trait_type": "Size",
+      "value": "Medium"
+    },
+    {
+      "trait_type": "Ingredient",
+      "value": "Rice And Eggs"
+    },
+    {
+      "trait_type": "Speed",
+      "value": "Moderate"
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Points",
+      "value": 22
     },
     {
       "display_type": "boost_number",
@@ -46,17 +103,17 @@
     },
     {
       "display_type": "boost_percentage",
-      "trait_type": "Stamina",
-      "value": 10
+      "trait_type": "Attack power",
+      "value": 20
     },
     {
-      "display_type": "number",
-      "trait_type": "Generation",
-      "value": 3
+      "display_type": "boost_percentage",
+      "trait_type": "Obstacle Resistance",
+      "value": 20
     },
     {
-      "display_type": "date", 
-      "trait_type": "birthday", 
+      "display_type": "date",
+      "trait_type": "birthday",
       "value": 1546360800
     }
   ]
